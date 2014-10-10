@@ -1,0 +1,17 @@
+---
+driver:
+  name: vagrant
+  box: base
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: ubuntu-12.04
+  - name: centos-6.4
+
+suites:
+  - name: default
+    run_list:
+      recipe[cakephp2_deploy::default]
+    attributes:
