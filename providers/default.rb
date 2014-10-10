@@ -24,7 +24,7 @@ action :create do
     ["cache","cache/persistent", "cache/models", "logs"].each do |subdir|
 
       directory "%s/%s" % [path,subdir] do
-        owner 'www-data'
+        owner new_resource.user
         mode "0766"
         recursive true
         action :create

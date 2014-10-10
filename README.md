@@ -20,6 +20,7 @@ Use path to cakephp app directory as name of resource.
 cakephp2_deploy "/var/www/app" do
 
         action :create
+        user "www-data" # this is default 
 
 end
 
@@ -35,6 +36,7 @@ cakephp2_deploy "/var/www/app/tmp" do
 
 	action :create
     create_tmp_dir false 
+    user "www-data" # this is default
 
 end
 
