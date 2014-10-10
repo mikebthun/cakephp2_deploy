@@ -1,6 +1,4 @@
 # cakephp2_deploy-cookbook
---------------------------------
-
 
 LWRP for created tmp, log and cache directories for CakePHP (tested on CakePHP 2)
 
