@@ -21,24 +21,20 @@ Use path to cakephp app directory as name of resource.
 
 cakephp2_deploy "/var/www/app" do
 
-        
         action :create
 
 end
 
 ```
 
-
-
 #### Symlinks
 
-If your tmp directory is already created with symlinks path should include tmp in path and \ dir if it as already symlinked
+If your tmp directory is already created with symlinks, path should include tmp in path and create_tmp_dir should be set to false.
 
 ```
 
 cakephp2_deploy "/var/www/app/tmp" do
 
-        
 	action :create
     create_tmp_dir false 
 
