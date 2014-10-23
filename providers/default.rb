@@ -21,6 +21,15 @@ action :create do
       path = cleaned_path
     end
 
+
+    # make sure parent dir has write perms 
+    directory path do
+      owner new_resource.user
+      mode "0766"
+      recursive true
+      action :create
+    end
+
     ["cache","cache/persistent", "cache/models", "logs"].each do |subdir|
 
       directory "%s/%s" % [path,subdir] do
